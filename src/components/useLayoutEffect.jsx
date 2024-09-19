@@ -6,8 +6,10 @@ useLayoutEffect(() => {
   }, []);
 
   useEffect(() => {
-    console.log('This runs after the component has rendered.');
+    console.log('This runs after the component rendered.');
   }, []);
+
+
   
   
 
