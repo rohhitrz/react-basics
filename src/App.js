@@ -35,42 +35,63 @@
 
 import React,{ useState } from "react";
 import NavBar from "./useContextUsingContextapi/NavBar";
-// import { useContext } from "react";
+import { useContext } from "react";
 import { counterContext } from "./useContextUsingContextapi/context";
+
+import CounterComponent from "./customHooks/customHookComponent";
+
 
 
 function App(){
 
   //to create a counter
 
-  const[count,setCount]=useState(0);
+//   const[count,setCount]=useState(0);
 
-  const increment=()=>{
-    setCount(count+1);
-  }
+//   const increment=()=>{
+//     setCount(count+1);
+//   }
 
-  const decrement=()=>{
-    setCount(count-1);
-}
+//   const decrement=()=>{
+//     setCount(count-1);
+// }
+
+// return(
+//   <>
+//   <counterContext.Provider value={count}> 
+//   <NavBar/>
+//   {/* <NavBar count={count}/> */}
+//    <div style={{display:"flex", flexDirection:"column", width:"20rem"}}>
+//     <h1>Counter App</h1>
+//     <h2>count:{count}</h2>
+//     <button onClick={increment}>Increase</button>
+//     <button onClick={decrement}>Decrease</button>
+
+
+
+//    </div>
+//    </counterContext.Provider>
+//    </>
+
+//   )
 
 return(
-  <>
-  <counterContext.Provider value={count}> 
-  <NavBar/>
-  {/* <NavBar count={count}/> */}
-   <div style={{display:"flex", flexDirection:"column", width:"20rem"}}>
-    <h1>Counter App</h1>
-    <h2>count:{count}</h2>
-    <button onClick={increment}>Increase</button>
-    <button onClick={decrement}>Decrease</button>
+  <div>
+    <h1>My custom counter App</h1>
+    <CounterComponent/>
+
+  
+  </div>
 
 
 
-   </div>
-   </counterContext.Provider>
-   </>
 
-  )
+
+
+)
+
+
+
 }
 
 
