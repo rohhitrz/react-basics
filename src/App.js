@@ -34,6 +34,9 @@
 
 
 import React,{ useState } from "react";
+import NavBar from "./useContextUsingContextapi/NavBar";
+// import { useContext } from "react";
+import { counterContext } from "./useContextUsingContextapi/context";
 
 
 function App(){
@@ -51,6 +54,10 @@ function App(){
 }
 
 return(
+  <>
+  <counterContext.Provider value={count}> 
+  <NavBar/>
+  {/* <NavBar count={count}/> */}
    <div style={{display:"flex", flexDirection:"column", width:"20rem"}}>
     <h1>Counter App</h1>
     <h2>count:{count}</h2>
@@ -60,6 +67,8 @@ return(
 
 
    </div>
+   </counterContext.Provider>
+   </>
 
   )
 }
